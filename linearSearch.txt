@@ -1,0 +1,30 @@
+In computer science, a linear search or sequential search is a method for finding an element within a list. It sequentially checks each element of the list until a match is found or the whole list has been searched.
+Class: Search algorithm
+Worst-case space complexity: O(1) iterative
+
+
+
+
+#include<stdio.h>
+#include<conio.h>
+int linearSearch(int a[],int n,int x)
+{     
+    int i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]==x)
+		return i+1;
+	}
+	return-1;
+}
+int main(){
+	int arr[5];
+	printf("Enter 5 elements:");
+	int i;
+	for(i = 0 ; i<5;i++){
+		scanf("%d",&arr[i]);
+	}
+	int target = 40;
+	int result = linearSearch(arr,5,target);
+	printf("target found at %d",result);
+}
